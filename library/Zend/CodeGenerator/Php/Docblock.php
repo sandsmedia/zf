@@ -208,7 +208,7 @@ class Zend_CodeGenerator_Php_Docblock extends Zend_CodeGenerator_Php_Abstract
     {
         $indent = $this->getIndentation();
         $output = $indent . '/**' . self::LINE_FEED;
-        $content = wordwrap($content, 80, self::LINE_FEED);
+        $content = wordwrap($content, 1000, self::LINE_FEED);
         $lines = explode(self::LINE_FEED, $content);
         foreach ($lines as $line) {
             $output .= $indent . ' *';
